@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LOL.lol</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@300;400;700;900&display=swap" rel="stylesheet" />
     <style>
         * {
             margin: 0;
@@ -17,7 +18,7 @@
             background: #070709;
             height: 100vh;
             overflow: hidden;
-            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Orbitron', sans-serif;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -56,7 +57,7 @@
             position: absolute;
             will-change: transform;
             pointer-events: none;
-            color: rgba(255, 255, 255, 0.15);
+            color: rgba(255, 255, 255, 0.12);
             font-size: 10px;
             display: flex;
             align-items: center;
@@ -105,10 +106,10 @@
             pointer-events: none;
         }
         .enter-text {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 300;
-            letter-spacing: 0.6em;
-            color: rgba(255, 255, 255, 0.25);
+            letter-spacing: 0.8em;
+            color: rgba(255, 255, 255, 0.2);
             transition: all 0.4s ease;
             text-transform: uppercase;
             white-space: nowrap;
@@ -137,7 +138,7 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            max-width: 700px;
+            max-width: 720px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -167,13 +168,16 @@
         #main-content.visible .discord-wrapper {
             transition-delay: 0.50s;
         }
+        #main-content.visible .team-tag-wrapper {
+            transition-delay: 0.65s;
+        }
 
         .avatar-container {
             display: flex;
             justify-content: center;
             align-items: center;
             width: 100%;
-            margin: 0 auto 0.6rem auto;
+            margin: 0 auto 0.8rem auto;
             pointer-events: none;
             flex-shrink: 0;
         }
@@ -182,13 +186,13 @@
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.02);
+            background: rgba(255, 255, 255, 0.015);
             border: 1px solid rgba(255, 255, 255, 0.04);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 4rem;
-            color: rgba(255, 255, 255, 0.06);
+            color: rgba(255, 255, 255, 0.04);
             box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
             background-image: url('FBA26DEF-B80C-4F8A-8644-6FEA6B710558.JPG');
             background-size: cover;
@@ -201,10 +205,10 @@
         }
 
         .main-name {
-            font-size: 3.8rem;
+            font-size: 4.2rem;
             font-weight: 300;
-            letter-spacing: 0.15em;
-            color: rgba(255, 255, 255, 0.9);
+            letter-spacing: 0.2em;
+            color: rgba(255, 255, 255, 0.92);
             margin: 0 auto 0.2rem auto;
             line-height: 1.2;
             text-align: center;
@@ -212,10 +216,10 @@
         }
 
         .typing-wrapper {
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 300;
-            letter-spacing: 0.05em;
-            color: rgba(255, 255, 255, 0.35);
+            letter-spacing: 0.08em;
+            color: rgba(255, 255, 255, 0.25);
             min-height: 2.5rem;
             display: flex;
             justify-content: center;
@@ -232,7 +236,7 @@
             display: inline-block;
             width: 2px;
             height: 1.2em;
-            background: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.3);
             animation: blink 1s step-end infinite;
             margin-left: 2px;
         }
@@ -260,13 +264,13 @@
             gap: 0.7rem;
             padding: 0.4rem 1.6rem 0.4rem 1.2rem;
             border-radius: 100px;
-            background: rgba(255, 255, 255, 0.02);
+            background: rgba(255, 255, 255, 0.015);
             backdrop-filter: blur(4px);
             border: 1px solid rgba(255, 255, 255, 0.04);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            font-size: 0.7rem;
-            letter-spacing: 0.15em;
-            color: rgba(255, 255, 255, 0.3);
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            color: rgba(255, 255, 255, 0.25);
             text-transform: uppercase;
             transition: none !important;
             cursor: default;
@@ -274,11 +278,11 @@
         .role-badge:hover {
             transform: none !important;
             border-color: rgba(255, 255, 255, 0.04) !important;
-            background: rgba(255, 255, 255, 0.02) !important;
+            background: rgba(255, 255, 255, 0.015) !important;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
         }
         .role-badge .role-icon {
-            font-size: 1.1rem;
+            font-size: 1rem;
             width: 1.4rem;
             text-align: center;
             transition: none !important;
@@ -287,43 +291,43 @@
             font-weight: 500;
         }
         .role-badge.verified .role-icon {
-            color: rgba(59, 130, 246, 0.8);
+            color: rgba(255, 255, 255, 0.6);
         }
         .role-badge.developer .role-icon {
-            color: rgba(79, 195, 247, 0.7);
+            color: rgba(255, 255, 255, 0.4);
         }
 
         .discord-wrapper {
             display: inline-flex;
             align-items: center;
             gap: 1.5rem;
-            padding: 1rem 2.8rem 1rem 2rem;
-            border-radius: 24px;
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            background: rgba(255, 255, 255, 0.02);
+            padding: 0.9rem 2.8rem 0.9rem 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            background: rgba(255, 255, 255, 0.01);
             backdrop-filter: blur(4px);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-            transition: border-color 0.3s ease, background 0.3s ease;
+            transition: border-color 0.4s ease, background 0.4s ease;
             pointer-events: auto;
             flex-wrap: wrap;
             justify-content: center;
             min-width: 340px;
         }
         .discord-wrapper:hover {
-            border-color: rgba(255, 255, 255, 0.12);
-            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.02);
         }
         .server-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 14px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.03);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.1);
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.08);
             flex-shrink: 0;
             background-image: url('file_1784724122974.jpg');
             background-size: cover;
@@ -337,51 +341,88 @@
             display: inline-flex;
             align-items: center;
             gap: 0.8rem;
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 1rem;
             text-decoration: none;
-            transition: color 0.3s ease;
-            font-weight: 400;
-            letter-spacing: 0.05em;
+            transition: color 0.4s ease;
+            font-weight: 300;
+            letter-spacing: 0.1em;
             background: transparent;
             border: none;
         }
         .discord-link i {
-            font-size: 1.5rem;
-            color: rgba(255, 255, 255, 0.3);
-            transition: color 0.3s ease;
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.2);
+            transition: color 0.4s ease;
         }
         .discord-link:hover {
-            color: #5865F2;
+            color: #fff;
         }
         .discord-link:hover i {
-            color: #5865F2;
+            color: #fff;
         }
         .discord-link .server-name {
             font-weight: 300;
-            color: rgba(255, 255, 255, 0.5);
-            transition: color 0.3s ease;
+            color: rgba(255, 255, 255, 0.4);
+            transition: color 0.4s ease;
         }
         .discord-link:hover .server-name {
-            color: rgba(255, 255, 255, 0.9);
+            color: #fff;
         }
         .owner-tag {
-            font-size: 0.75rem;
-            font-weight: 500;
-            letter-spacing: 0.08em;
-            color: rgba(245, 166, 35, 0.7);
-            border: 1px solid rgba(245, 166, 35, 0.15);
-            padding: 0.3rem 1.2rem;
+            font-size: 0.6rem;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+            color: rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 0.2rem 1rem;
             border-radius: 20px;
-            background: rgba(245, 166, 35, 0.05);
+            background: rgba(255, 255, 255, 0.01);
             text-transform: uppercase;
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
             white-space: nowrap;
         }
         .discord-wrapper:hover .owner-tag {
-            color: rgba(245, 166, 35, 0.95);
-            border-color: rgba(245, 166, 35, 0.3);
-            background: rgba(245, 166, 35, 0.08);
+            color: rgba(255, 255, 255, 0.7);
+            border-color: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .team-tag-wrapper {
+            margin-top: 2.2rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            pointer-events: none;
+        }
+
+        .team-tag {
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 0.5em;
+            color: rgba(255, 255, 255, 0.9);
+            text-transform: uppercase;
+            text-shadow: 0 0 60px rgba(255, 255, 255, 0.04), 0 0 120px rgba(255, 255, 255, 0.02);
+            padding-top: 1.2rem;
+            width: 100%;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            position: relative;
+        }
+        .team-tag::after {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+        }
+        .team-tag .highlight {
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.15);
+            letter-spacing: 0.8em;
         }
 
         #footer-bar {
@@ -402,31 +443,31 @@
             display: flex;
             align-items: center;
             gap: 1.2rem;
-            padding: 0.5rem 1.5rem 0.5rem 1.2rem;
+            padding: 0.4rem 1.5rem 0.4rem 1.2rem;
             border-radius: 60px;
-            background: rgba(10, 10, 15, 0.7);
+            background: rgba(10, 10, 15, 0.5);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.04);
-            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.7);
-            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+            transition: all 0.4s ease;
         }
         .audio-player:hover {
-            border-color: rgba(255, 255, 255, 0.07);
-            background: rgba(14, 14, 20, 0.8);
+            border-color: rgba(255, 255, 255, 0.06);
+            background: rgba(14, 14, 20, 0.6);
         }
         #playBtn {
             background: transparent;
             border: none;
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 1.1rem;
             cursor: pointer;
             padding: 4px;
-            width: 30px;
-            height: 30px;
+            width: 28px;
+            height: 28px;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.25s ease;
+            transition: all 0.3s ease;
             flex-shrink: 0;
         }
         #playBtn:hover {
@@ -437,16 +478,16 @@
             transform: scale(0.9);
         }
         .track-info {
-            color: rgba(255, 255, 255, 0.15);
-            font-size: 0.65rem;
-            letter-spacing: 0.08em;
-            max-width: 120px;
+            color: rgba(255, 255, 255, 0.1);
+            font-size: 0.6rem;
+            letter-spacing: 0.12em;
+            max-width: 100px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
         .track-info .track-name {
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255, 255, 255, 0.4);
             font-weight: 400;
         }
         .playing-indicator {
@@ -456,38 +497,38 @@
         }
         .playing-indicator .bar {
             width: 2px;
-            height: 10px;
-            background: rgba(255, 255, 255, 0.04);
+            height: 8px;
+            background: rgba(255, 255, 255, 0.03);
             border-radius: 2px;
             transition: all 0.3s ease;
         }
         .playing-indicator .bar.active {
-            background: rgba(120, 200, 255, 0.3);
+            background: rgba(255, 255, 255, 0.2);
             animation: barPulse 0.8s ease-in-out infinite alternate;
         }
         .playing-indicator .bar:nth-child(2).active {
             animation-delay: 0.2s;
-            height: 14px;
+            height: 12px;
         }
         .playing-indicator .bar:nth-child(3).active {
             animation-delay: 0.4s;
-            height: 8px;
+            height: 6px;
         }
         .playing-indicator .bar:nth-child(4).active {
             animation-delay: 0.1s;
-            height: 12px;
+            height: 10px;
         }
         .playing-indicator .bar:nth-child(5).active {
             animation-delay: 0.3s;
-            height: 6px;
+            height: 4px;
         }
         @keyframes barPulse {
             0% {
-                height: 4px;
+                height: 3px;
                 opacity: 0.1;
             }
             100% {
-                height: 16px;
+                height: 14px;
                 opacity: 1;
             }
         }
@@ -501,21 +542,21 @@
         .volume-icon-btn {
             background: transparent;
             border: none;
-            color: rgba(255, 255, 255, 0.35);
-            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.2);
+            font-size: 1rem;
             cursor: pointer;
-            padding: 6px;
+            padding: 4px;
             border-radius: 50%;
-            transition: all 0.25s ease;
+            transition: all 0.3s ease;
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 34px;
-            height: 34px;
+            width: 30px;
+            height: 30px;
         }
         .volume-icon-btn:hover {
-            color: rgba(255, 255, 255, 0.7);
-            background: rgba(255, 255, 255, 0.05);
+            color: rgba(255, 255, 255, 0.6);
+            background: rgba(255, 255, 255, 0.03);
         }
         .volume-icon-btn:active {
             transform: scale(0.9);
@@ -528,10 +569,10 @@
                 font-size: 3rem;
             }
             .main-name {
-                font-size: 2.8rem;
+                font-size: 3rem;
             }
             .typing-wrapper {
-                font-size: 0.9rem;
+                font-size: 0.8rem;
                 padding: 0 1rem;
             }
             #typed-text {
@@ -539,91 +580,128 @@
                 word-break: break-word;
             }
             .discord-wrapper {
-                padding: 0.8rem 1.8rem;
-                gap: 1rem;
-                min-width: 260px;
+                padding: 0.7rem 1.6rem;
+                gap: 0.8rem;
+                min-width: 240px;
             }
             .enter-text {
-                font-size: 1.3rem;
-                letter-spacing: 0.3em;
+                font-size: 1.2rem;
+                letter-spacing: 0.4em;
                 white-space: normal;
+            }
+            .team-tag {
+                font-size: 1rem;
+                letter-spacing: 0.3em;
+                padding-top: 1rem;
+            }
+            .roles {
+                gap: 1.2rem;
+            }
+            .role-badge {
+                padding: 0.3rem 1rem;
+                font-size: 0.55rem;
+                gap: 0.4rem;
+            }
+            .role-badge .role-icon {
+                font-size: 0.8rem;
+                width: 1.2rem;
             }
         }
         @media (max-width: 450px) {
             .avatar {
-                width: 85px;
-                height: 85px;
-                font-size: 2.2rem;
+                width: 80px;
+                height: 80px;
+                font-size: 2rem;
             }
             .main-name {
                 font-size: 2.2rem;
             }
             .typing-wrapper {
-                font-size: 0.75rem;
+                font-size: 0.65rem;
             }
             .discord-wrapper {
-                padding: 0.6rem 1.2rem;
-                gap: 0.6rem;
-                min-width: 200px;
-                border-radius: 18px;
+                padding: 0.5rem 1rem;
+                gap: 0.5rem;
+                min-width: 180px;
+                border-radius: 16px;
             }
             .server-icon {
-                width: 32px;
-                height: 32px;
-                border-radius: 10px;
-                font-size: 0.7rem;
+                width: 30px;
+                height: 30px;
+                border-radius: 8px;
+                font-size: 0.6rem;
             }
             .discord-link {
-                font-size: 0.8rem;
+                font-size: 0.7rem;
             }
             .discord-link i {
-                font-size: 1rem;
+                font-size: 0.9rem;
             }
             .owner-tag {
-                font-size: 0.5rem;
-                padding: 0.15rem 0.6rem;
+                font-size: 0.4rem;
+                padding: 0.1rem 0.5rem;
             }
             .audio-player {
-                padding: 0.3rem 0.8rem;
-                gap: 0.5rem;
+                padding: 0.25rem 0.7rem;
+                gap: 0.4rem;
                 border-radius: 30px;
             }
             .track-info {
-                max-width: 50px;
-                font-size: 0.5rem;
+                max-width: 40px;
+                font-size: 0.45rem;
             }
             #playBtn {
-                font-size: 0.9rem;
-                width: 26px;
-                height: 26px;
+                font-size: 0.8rem;
+                width: 24px;
+                height: 24px;
             }
             .volume-icon-btn {
-                width: 28px;
-                height: 28px;
-                font-size: 0.9rem;
+                width: 24px;
+                height: 24px;
+                font-size: 0.8rem;
             }
             .enter-text {
-                font-size: 1.0rem;
+                font-size: 0.9rem;
                 letter-spacing: 0.2em;
                 white-space: normal;
                 text-align: center;
             }
             .playing-indicator .bar {
-                height: 8px;
+                height: 6px;
             }
             .playing-indicator .bar:nth-child(2).active {
-                height: 11px;
+                height: 9px;
             }
             .playing-indicator .bar:nth-child(4).active {
-                height: 10px;
+                height: 8px;
             }
             @keyframes barPulse {
                 0% {
-                    height: 3px;
+                    height: 2px;
                 }
                 100% {
-                    height: 13px;
+                    height: 10px;
                 }
+            }
+            .team-tag {
+                font-size: 0.75rem;
+                letter-spacing: 0.2em;
+                padding-top: 0.8rem;
+            }
+            .team-tag::after {
+                width: 80px;
+            }
+            .roles {
+                gap: 0.8rem;
+            }
+            .role-badge {
+                padding: 0.2rem 0.7rem;
+                font-size: 0.45rem;
+                gap: 0.3rem;
+            }
+            .role-badge .role-icon {
+                font-size: 0.6rem;
+                width: 1rem;
             }
         }
     </style>
@@ -668,9 +746,15 @@
                 </div>
                 <a href="https://discord.gg/NbypSpEfFX" target="_blank" class="discord-link">
                     <i class="fab fa-discord"></i>
-                    <span class="server-name">Entropy</span>
+                    <span class="server-name">Pulsar Hub</span>
                 </a>
                 <span class="owner-tag">Owner</span>
+            </div>
+
+            <div class="team-tag-wrapper animate-item">
+                <div class="team-tag">
+                    TEAM <span class="highlight">✦</span> ENTROPY
+                </div>
             </div>
 
         </div>
@@ -782,8 +866,7 @@
 
             const FIELD = document.getElementById('particle-field');
 
-            // ---- ドット（星のような小さな光） ----
-            const DOT_COUNT = 350;
+            const DOT_COUNT = 180;
             const dots = [];
             const rand = (min, max) => Math.random() * (max - min) + min;
 
@@ -798,8 +881,8 @@
                 dot.style.width = size + 'px';
                 dot.style.height = size + 'px';
                 dot.style.opacity = rand(0.3, 0.9);
-                dot.style.background = 'rgba(255,255,255,0.15)';
-                dot.style.boxShadow = '0 0 ' + rand(4, 12) + 'px rgba(255,255,255,0.05)';
+                dot.style.background = 'rgba(255,255,255,0.12)';
+                dot.style.boxShadow = '0 0 ' + rand(4, 12) + 'px rgba(255,255,255,0.03)';
                 const initialOffset = rand(-30, 0);
                 dot.style.transform = 'translateY(' + initialOffset + 'px)';
                 const data = {
@@ -813,8 +896,7 @@
                 FIELD.appendChild(dot);
             }
 
-            // ---- ★ 星マーク（★） ----
-            const STAR_COUNT = 80;
+            const STAR_COUNT = 30;
             const starEls = [];
             for (let i = 0; i < STAR_COUNT; i++) {
                 const star = document.createElement('div');
@@ -826,7 +908,7 @@
                 star.style.color = `rgba(255,255,255,${rand(0.2, 0.5)})`;
                 star.style.animationDelay = rand(0, 3) + 's';
                 star.style.animationDuration = rand(1.5, 3.5) + 's';
-                star.style.textShadow = '0 0 ' + rand(4, 12) + 'px rgba(255,255,255,0.05)';
+                star.style.textShadow = '0 0 ' + rand(4, 12) + 'px rgba(255,255,255,0.03)';
                 const data = {
                     el: star,
                     speed: rand(0.002, 0.02),
@@ -838,8 +920,7 @@
                 FIELD.appendChild(star);
             }
 
-            // ---- ✚ 十字架 ----
-            const CROSS_COUNT = 40;
+            const CROSS_COUNT = 15;
             const crossEls = [];
             for (let i = 0; i < CROSS_COUNT; i++) {
                 const cross = document.createElement('div');
@@ -848,10 +929,10 @@
                 cross.style.left = rand(0, 100) + '%';
                 cross.style.top = rand(0, 100) + '%';
                 cross.style.fontSize = rand(8, 18) + 'px';
-                cross.style.color = `rgba(200,200,255,${rand(0.1, 0.3)})`;
+                cross.style.color = `rgba(200,200,255,${rand(0.08, 0.25)})`;
                 cross.style.animationDelay = rand(0, 4) + 's';
                 cross.style.animationDuration = rand(2, 5) + 's';
-                cross.style.textShadow = '0 0 ' + rand(6, 16) + 'px rgba(200,200,255,0.05)';
+                cross.style.textShadow = '0 0 ' + rand(6, 16) + 'px rgba(200,200,255,0.03)';
                 const data = {
                     el: cross,
                     speed: rand(0.001, 0.012),
